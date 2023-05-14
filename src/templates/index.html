@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="description" content="Kiiro Restaurant Apps">
+  <title>Kiiro Restaurant Apps</title>
+</head>
+<body>
+  <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+  <header class="header">
+    <div class="container">
+      <img src="/images/logo-brand.svg" alt="Logo Kiiro" title="Kiiro" class="brand">
+  
+      <div class="hamburger">
+        <button class="hamburger__btn btn" id="hamburger" type="button" title="Humberger menu">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.89999 6.50001C3.89999 6.15523 4.03696 5.82457 4.28076 5.58077C4.52455 5.33698 4.85521 5.20001 5.19999 5.20001H20.8C21.1448 5.20001 21.4754 5.33698 21.7192 5.58077C21.963 5.82457 22.1 6.15523 22.1 6.50001C22.1 6.84479 21.963 7.17545 21.7192 7.41925C21.4754 7.66305 21.1448 7.80001 20.8 7.80001H5.19999C4.85521 7.80001 4.52455 7.66305 4.28076 7.41925C4.03696 7.17545 3.89999 6.84479 3.89999 6.50001ZM3.89999 13C3.89999 12.6552 4.03696 12.3246 4.28076 12.0808C4.52455 11.837 4.85521 11.7 5.19999 11.7H20.8C21.1448 11.7 21.4754 11.837 21.7192 12.0808C21.963 12.3246 22.1 12.6552 22.1 13C22.1 13.3448 21.963 13.6755 21.7192 13.9193C21.4754 14.163 21.1448 14.3 20.8 14.3H5.19999C4.85521 14.3 4.52455 14.163 4.28076 13.9193C4.03696 13.6755 3.89999 13.3448 3.89999 13ZM11.7 19.5C11.7 19.1552 11.837 18.8246 12.0808 18.5808C12.3246 18.337 12.6552 18.2 13 18.2H20.8C21.1448 18.2 21.4754 18.337 21.7192 18.5808C21.963 18.8246 22.1 19.1552 22.1 19.5C22.1 19.8448 21.963 20.1755 21.7192 20.4193C21.4754 20.663 21.1448 20.8 20.8 20.8H13C12.6552 20.8 12.3246 20.663 12.0808 20.4193C11.837 20.1755 11.7 19.8448 11.7 19.5Z" fill="#EEEEEE"/>
+          </svg>
+        </button>
+      </div>
+  
+      <nav id="drawer" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item active"><a href="/">HOME</a></li>
+          <li class="nav__item"><a href="#">FAVORITE</a></li>
+          <li class="nav__item"><a href="https://www.linkedin.com/in/akbar-mahmudin/" target="_blank">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <h1 class="hero__title">Welcome to KIIRO</h1>
+        <p class="hero__tagline">Find your favorite restaurant here</p>
+        <a href="#" class="hero__ctas btn">Go</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="maincontent">
+    <section class="content">
+      <div class="popular container">
+        <h1 class="popular__label">Popular Restaurants</h1>
+        <div class="restaurants" id="restaurants">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        Made with ❤️ by <a href="https://github.com/AkbarMahmudin" class="footer__links">KIIRO DEV</a>
+      </p>
+    </div>
+  </footer>
+  <script src="../scripts/index.js"></script>
+</body>
+</html>
