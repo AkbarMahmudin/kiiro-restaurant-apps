@@ -4,6 +4,7 @@
   --background: #303841;
   --primary: #F6C90E;
   --secondary: #3A4750;
+  --secondary-hover: #3a475075;
   --text: #EEEEEE;
 }
 
@@ -40,10 +41,10 @@ img {
   margin: 4px;
 }
 
-*:focus {
+/* *:focus {
   outline: var(--primary);
   border: 1px solid var(--primary);
-}
+} */
 
 a {
   display: inline-block;
@@ -51,7 +52,13 @@ a {
   padding: 14px;
 }
 
+a:focus {
+  outline: solid 2px var(--primary);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
 .btn:focus {
+  outline: solid 2px var(--text) !important;
   box-shadow: 0 0 0 2px var(--text);
 }
 
@@ -244,7 +251,7 @@ a {
   font-size: 12px;
 }
 
-.restaurant-item__city,
+restaurant-city,
 .restaurant-item__rating,
 .restaurant-item__favorite {
   display: flex;
