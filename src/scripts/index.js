@@ -1,28 +1,20 @@
-import 'regenerator-runtime'; /* for async await transpile */
-import renderRestaurantList from './restaurants';
-import "modern-normalize"
-import '../styles/main.css';
+import 'regenerator-runtime' /* for async await transpile */
+import 'modern-normalize'
+import '../styles/main.css'
+import App from './views/app'
+import swRegister from './utils/sw-register'
 
-const mainElement = document.querySelector('main');
-const hamburgerButtonElement = document.querySelector('#hamburger');
-const drawerElement = document.querySelector('#drawer');
-const btnFavorite = document.querySelector('#btn-favorite');
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#maincontent')
+})
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderRestaurantList();
-});
- 
-hamburgerButtonElement.addEventListener('click', event => {
-  drawerElement.classList.toggle('open');
-  event.stopPropagation();
-});
+window.addEventListener('hashchange', () => {
+  app.renderPage()
+})
 
-mainElement.addEventListener('click', event => {
-  drawerElement.classList.remove('open');
-  event.stopPropagation();
-});
-
-btnFavorite.addEventListener('click', event => {
-  btnFavorite.classList.toggle('active');
-  event.stopPropagation();
-});
+window.addEventListener('load', () => {
+  app.renderPage()
+  swRegister()
+})

@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F6C90E"/>
   <meta name="description" content="Kiiro Restaurant Apps">
+
+  <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png">
+  <link rel="manifest" href="./app.webmanifest">
+  <link rel="icon" href="./images/favicon.png">
+
   <title>Kiiro Restaurant Apps</title>
 </head>
 <body>
-  <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+  <a href="#maincontent" id="skip-link" class="skip-link">Menuju ke konten</a>
   <header class="header">
     <div class="container">
       <img src="/images/logo-brand.svg" alt="Logo Kiiro" title="Kiiro" class="brand">
@@ -22,32 +28,15 @@
   
       <nav id="drawer" class="nav">
         <ul class="nav__list">
-          <li class="nav__item active"><a href="/">HOME</a></li>
-          <li class="nav__item"><a href="#">FAVORITE</a></li>
+          <li class="nav__item"><a href="/">HOME</a></li>
+          <li class="nav__item"><a href="#/favorite">FAVORITE</a></li>
           <li class="nav__item"><a href="https://www.linkedin.com/in/akbar-mahmudin/" target="_blank">ABOUT US</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="container">
-      <div class="hero__inner">
-        <h1 class="hero__title">Welcome to KIIRO</h1>
-        <p class="hero__tagline">Find your favorite restaurant here</p>
-        <a href="#" class="hero__ctas btn">Go</a>
-      </div>
-    </div>
-  </div>
-
-  <main id="maincontent">
-    <section class="content">
-      <div class="popular container">
-        <h1 class="popular__label">Popular Restaurants</h1>
-        <div class="restaurants" id="restaurants">
-        </div>
-      </div>
-    </section>
+  <main id="maincontent" tabindex="0">
   </main>
 
   <footer class="footer">
@@ -57,6 +46,5 @@
       </p>
     </div>
   </footer>
-  <script src="../scripts/index.js"></script>
 </body>
 </html>

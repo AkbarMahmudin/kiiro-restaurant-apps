@@ -6,6 +6,9 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "serve": "http-server dist",
+    "build-serve": "npm run build && npm run serve",
+    "lint": "eslint ./src",
     "test": "karma start"
   },
   "keywords": [],
@@ -15,11 +18,17 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
-    "eslint": "^8.17.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^4.2.0",
     "karma": "^5.2.3",
@@ -33,10 +42,19 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
-    "whatwg-fetch": "^3.6.2"
+    "whatwg-fetch": "^3.6.2",
+    "workbox-precaching": "^6.5.4",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
+    "idb": "^7.1.1",
     "modern-normalize": "^1.1.0",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "workbox-cacheable-response": "6.5.4",
+    "workbox-core": "6.5.4",
+    "workbox-expiration": "6.5.4",
+    "workbox-routing": "6.5.4",
+    "workbox-strategies": "6.5.4",
+    "workbox-window": "^6.5.4"
   }
 }
